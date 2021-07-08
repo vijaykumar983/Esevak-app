@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "860500444836",
+    "firebase_url": "https://esevak-79ba6.firebaseio.com",
+    "project_id": "esevak-79ba6",
+    "storage_bucket": "esevak-79ba6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:860500444836:android:f709c684922e969ee34831",
+        "android_client_info": {
+          "package_name": "in.jploft.esevak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "860500444836-rofk2fdru7hpgeqt5kjq3h0d01n37qcj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.jploft.esevak",
+            "certificate_hash": "4d63edb807fb117404e0c118b48eab35591863c8"
+          }
+        },
+        {
+          "client_id": "860500444836-t9s0gc6qfk1egdv9pflp9io0tduqndvh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBP7supygu3V4bkr4LF3jEQac_0cxJRrM4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "860500444836-t9s0gc6qfk1egdv9pflp9io0tduqndvh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

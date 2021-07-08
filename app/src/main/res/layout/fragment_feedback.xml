@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/appBar"
+            layout="@layout/layout_header" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15sdp"
+                android:orientation="vertical">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/ivProfile"
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/user"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="0.5dp" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtuserName"
+                    style="@style/HW_WW"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtSizeXLarge" />
+
+
+                <RatingBar
+                    android:id="@+id/myRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:rating="1"
+                    android:stepSize="1"
+                    android:theme="@style/RatingBar" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/bg_rounded_desciption"
+                    android:fontFamily="@font/poppins_light"
+                    android:gravity="top|left"
+                    android:hint="Write description..."
+                    android:inputType="textMultiLine"
+                    android:lines="5"
+                    android:maxLines="10"
+                    android:minHeight="@dimen/_35sdp"
+                    android:minLines="3"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/color_B7B7B7"
+                    android:textSize="@dimen/txtSizeNormal" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSubmitFeedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btnNormalSize"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/bg_rounded_orange"
+                    android:fontFamily="@font/poppins_medium"
+                    android:foreground="@drawable/ripple_rec"
+                    android:text="Submit Feedback"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/txtSizeNormal" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+</layout>

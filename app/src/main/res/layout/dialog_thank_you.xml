@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_20sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rounded_category_white">
+
+            <LinearLayout
+                android:id="@+id/linearMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivLogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_thanks_order" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivLogo1"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:srcCompat="@drawable/ic_success" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Thank you for your order"
+                    android:textColor="@color/color_20C715"
+                    android:textSize="@dimen/txtSizeLarge" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_light"
+                    android:gravity="center"
+                    android:text="You can see you order in \n 'Order history' section"
+                    android:textColor="@color/color_9B9B9B"
+                    android:textSize="@dimen/txtSizeSmall" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/linearMain"
+                android:background="@color/color_9B9B9B" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view1"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/poppins_regular"
+                android:foreground="@drawable/ripple_rec"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:padding="@dimen/_10sdp"
+                android:text="OK"
+                android:textAllCaps="true"
+                android:textColor="@color/color_FF653B"
+                android:textSize="@dimen/txtSizeNormal" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

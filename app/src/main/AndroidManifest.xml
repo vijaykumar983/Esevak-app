@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.jploft.esevak">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE " />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:hardwareAccelerated="true"
+        android:theme="@style/AppCustomTheme"
+        android:usesCleartextTraffic="true">
+
+        <!--SplashActivity-->
+        <activity
+            android:name=".ui.components.activities.splash.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeStatusBarSplash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- LoginSignupActivity -->
+        <activity
+            android:name=".ui.components.activities.loginSignup.LoginSignupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeStatusBarPrimaryColor"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+
+        <!-- ForgotPassActivity -->
+        <activity
+            android:name=".ui.components.activities.forgotPassword.ForgotPassActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeStatusBarPrimaryColor"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+
+        <!-- ResetPassActivity -->
+        <activity
+            android:name=".ui.components.activities.resetPassword.ResetPassActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeStatusBarPrimaryColor"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+
+        <!-- VerifyOtpActivity -->
+        <activity
+            android:name=".ui.components.activities.verifyOtp.VerifyOtpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeStatusBarPrimaryColor"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+
+        <!-- UpdateProfileActivity -->
+        <activity
+            android:name=".ui.components.activities.createProfile.UpdateProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeStatusBarPrimaryColor"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+
+        <!--UCropActivity-->
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeStatusBarPrimaryColor"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+
+
+        <!-- HomeActivity -->
+        <activity
+            android:name=".ui.components.activities.home.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeStatusBarPrimaryColor"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+
+        <!-- PaymentActivity -->
+        <activity
+            android:name=".ui.components.activities.payment.PaymentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeStatusBarPrimaryColor"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+
+        <!-- <activity
+             android:name="com.paytm.pgsdk.PaytmPGActivity"
+             android:configChanges="keyboardHidden|orientation|keyboard"
+             android:theme="@style/AppTheme"
+             android:screenOrientation="portrait" />-->
+
+        <!-- PaymentWebViewActivity -->
+        <activity
+            android:name=".ui.components.activities.paymentGatway.PaymentWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeStatusBarPrimaryColor"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+
+        <!-- PaymentSuccessActivity -->
+        <activity
+            android:name=".ui.components.activities.paymentGatway.PaymentSuccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeStatusBarPrimaryColor"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="in.jploft.esevak"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepath" />
+        </provider>
+
+    </application>
+
+</manifest>

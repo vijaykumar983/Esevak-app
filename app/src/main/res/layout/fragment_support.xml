@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/appBar"
+            layout="@layout/layout_header" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_180sdp"
+                android:layout_height="@dimen/_180sdp"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/ic_support" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Contact Support"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/txtSizeXLarge" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/poppins_light"
+                android:gravity="center"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet."
+                android:textColor="@color/color_9B9B9B"
+                android:textSize="@dimen/txtSizeSmall" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEmailId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="@dimen/_20sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:foreground="@drawable/ripple_rec"
+                android:onClick="onClick"
+                android:text="support@esevak.com"
+                android:textColor="@color/color_FF653B"
+                android:textSize="@dimen/txtSizeLarge" />
+
+            <LinearLayout
+                android:id="@+id/linearContact"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btnNormalSize"
+                android:background="@drawable/bg_rounded_orange"
+                android:foreground="@drawable/ripple_rec"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_18sdp"
+                    android:src="@drawable/ic_phone_call" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="+91-9658741241"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/txtSizeLarge" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+</layout>

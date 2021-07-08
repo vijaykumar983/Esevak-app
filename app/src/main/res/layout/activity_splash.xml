@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@color/colorPrimary"
+        tools:context=".ui.components.activities.splash.SplashActivity">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCircle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_300sdp"
+            android:layout_centerInParent="true"
+            android:alpha="0.3"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            app:srcCompat="@drawable/ic_splash_circle"
+            />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imvLogo"
+            android:layout_width="@dimen/logo_width"
+            android:layout_height="@dimen/logo_height"
+            android:layout_centerInParent="true"
+            android:src="@drawable/logo_white" />
+
+    </RelativeLayout>
+</layout>

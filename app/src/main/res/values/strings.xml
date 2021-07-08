@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">Esevak</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="default_txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+
+
+    <!-- String array for Drawer Layout-->
+    <string-array name="drawerNames">
+        <item>Home</item>
+        <item>Category</item>
+        <item>Cart</item>
+        <item>Wallet</item>
+        <item>Order History</item>
+        <item>Support</item>
+        <item>Profile</item>
+        <item>Feedback</item>
+        <item>Logout</item>
+    </string-array>
+
+    <string-array name="categoryName">
+        <item>Electrical</item>
+        <item>Plumbling</item>
+        <item>AC</item>
+        <item>Carpentry</item>
+        <item>Horticulture</item>
+        <item>Civil</item>
+        <item>Pest Control</item>
+        <item>AMC</item>
+    </string-array>
+
+    <string-array name="allCategoryName">
+        <item>Electrical</item>
+        <item>Plumbling</item>
+        <item>AC</item>
+        <item>Carpentry</item>
+        <item>Horticulture</item>
+        <item>Civil</item>
+        <item>Pest Control</item>
+        <item>AMC</item>
+        <item>Electrical</item>
+        <item>Plumbling</item>
+        <item>AC</item>
+        <item>Carpentry</item>
+        <item>Horticulture</item>
+        <item>Civil</item>
+        <item>Pest Control</item>
+        <item>AMC</item>
+        <item>Electrical</item>
+        <item>Plumbling</item>
+        <item>AC</item>
+        <item>Carpentry</item>
+    </string-array>
+
+    <!--All Validations-->
+    <string name="enter_mobile">Please enter mobile</string>
+    <string name="enter_otp">Please enter OTP</string>
+    <string name="enter_valid_mobile_number">Please enter a valid mobile number</string>
+    <string name="enter_valid_otp">Please enter valid OTP</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="enter_password">Please enter password</string>
+    <string name="enter_cpassword">Please enter confirm password</string>
+    <string name="minimum_6_characters">Please enter at least 6 characters</string>
+    <string name="password_not_match">Password and confirm password do not match</string>
+    <string name="enter_address">Please enter address</string>
+    <string name="minimum_3_char_long_address">Please enter address at least 3 characters long</string>
+    <string name="minimum_3_char_long_name">Please enter name at least 3 characters long</string>
+    <string name="minimum_3_char_desciption">Please enter description at least 3 characters long</string>
+    <string name="enter_name">Please enter name</string>
+    <string name="enter_email">Please enter email id</string>
+    <string name="enter_valid_email_id">Please enter a valid email id</string>
+    <string name="please_select_image">Please select image</string>
+    <string name="enter_description">Please enter description</string>
+
+
+    <string name="submit">Submit</string>
+    <string name="permission_required">Permissions Required</string>
+    <string name="you_have_forcefully">You have forcefully denied some of the required permissions</string>
+    <string name="for_this_action">for this action. Please open settings, go to permissions and allow them.</string>
+    <string name="no_internet">No internet connection</string>
+</resources>

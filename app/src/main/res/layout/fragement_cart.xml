@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/appBar"
+            layout="@layout/layout_header" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/linearMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvCart"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:clipToPadding="false"
+                            android:orientation="vertical"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                        <!--tools:listitem="@layout/row_cart"-->
+
+                        <include
+                            android:id="@+id/layoutError"
+                            layout="@layout/layout_error_show" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:background="@drawable/bg_rounded_white"
+                        android:clipToPadding="false"
+                        android:elevation="@dimen/_2sdp"
+                        android:padding="@dimen/_10sdp">
+
+                        <LinearLayout
+                            android:id="@+id/linearCouponCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/editNormalSize"
+                            android:background="@drawable/bg_rounded_corner_coupon"
+                            android:gravity="center_vertical"
+                            android:minHeight="?actionBarSize"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edtCouponCode"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/colorWhite"
+                                android:fontFamily="@font/poppins_light"
+                                android:hint="Enter Coupon Code"
+                                android:inputType="text"
+                                android:minHeight="@dimen/editNormalSize"
+                                android:paddingLeft="@dimen/_10sdp"
+                                android:textColor="@color/colorBlack"
+                                android:textColorHint="@color/color_9B9B9B"
+                                android:textSize="@dimen/txtSizeNormal" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvApplyCode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_10sdp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:foreground="@drawable/ripple_rec"
+                                android:onClick="onClick"
+                                android:text="Apply"
+                                android:textColor="@color/color_FF653B"
+                                android:textSize="@dimen/txtSizeNormal"
+                                app:textAllCaps="true" />
+
+                            <LinearLayout
+                                android:id="@+id/linearApplyCoupon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_10sdp"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvCode"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="@dimen/_5sdp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:onClick="onClick"
+                                    android:text="feast"
+                                    android:textColor="@color/color_FF653B"
+                                    android:textSize="@dimen/txtSizeNormal"
+                                    app:textAllCaps="false" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivCouponCancel"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_gravity="center_vertical"
+                                    android:background="@drawable/bg_ovel_orange"
+                                    android:foreground="@drawable/ripple_round"
+                                    android:padding="@dimen/_5sdp"
+                                    android:src="@drawable/ic_close"
+                                    android:tint="@color/colorWhite" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtCartTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/linearCouponCode"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="Cart Total"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/txtSizeNormal" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvCartTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/linearCouponCode"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="0"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/txtSizeNormal" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtTax"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtCartTotal"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="Tax"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/txtSizeNormal" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTax"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtCartTotal"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="0"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/txtSizeNormal" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtDiscount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtTax"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="Discount"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/txtSizeNormal" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvDiscount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtTax"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="0"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/txtSizeNormal" />
+
+                        <View
+                            android:id="@+id/view1"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1ssp"
+                            android:layout_below="@id/txtDiscount"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/horizontal_dashed_line" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtTotalAmt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/view1"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="Total Amount"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/txtSizeLarge" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTotalAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/view1"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="0"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/txtSizeLarge" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:background="@drawable/bg_rounded_white"
+                        android:clipToPadding="false"
+                        android:elevation="@dimen/_2sdp"
+                        android:padding="@dimen/_10sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtDayTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Choose a day and time"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/txtSizeNormal" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_below="@id/txtDayTime"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:id="@+id/llSelectDay"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_rounded_corner_coupon"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/_5sdp"
+                                android:weightSum="1">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvSelectDay"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:drawSelectorOnTop="true"
+                                    android:text="Select day"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/txtSizeNormal"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:scrollHorizontally="true"
+                                    android:singleLine="true"
+                                    android:ellipsize="marquee"
+                                    android:fadingEdge="horizontal"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:foreground="@drawable/ripple_rec"
+                                    android:popupBackground="@color/white" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="@dimen/_15sdp"
+                                    android:layout_height="@dimen/_15sdp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="0"
+                                    app:srcCompat="@drawable/ic_down_arrow" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llSelectTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_rounded_corner_coupon"
+                                android:gravity="center_vertical"
+                                android:padding="@dimen/_5sdp"
+                                android:weightSum="1">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvSelectTime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:drawSelectorOnTop="true"
+                                    android:text="Select time"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/txtSizeNormal"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:scrollHorizontally="true"
+                                    android:singleLine="true"
+                                    android:ellipsize="marquee"
+                                    android:fadingEdge="horizontal"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:foreground="@drawable/ripple_rec"
+                                    android:popupBackground="@color/white" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="@dimen/_15sdp"
+                                    android:layout_height="@dimen/_15sdp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="0"
+                                    app:srcCompat="@drawable/ic_down_arrow" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginVertical="@dimen/_15sdp"
+                        android:background="@drawable/bg_corner_address"
+                        android:clipToPadding="false"
+                        android:elevation="@dimen/_2sdp"
+                        android:gravity="center_vertical"
+                        android:foreground="@drawable/ripple_rec"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@drawable/bg_rounded_orange"
+                            android:layout_margin="@dimen/_1sdp"
+                            android:layout_weight="0"
+                            >
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivLocation"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/_8sdp"
+                            app:srcCompat="@drawable/ic_location" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_8sdp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtAddress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Address"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/txtSizeNormal" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvAddress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="41-b mansarovar plaza, jaipur"
+                                android:textColor="@color/color_9B9B9B"
+                                android:textSize="@dimen/txtSizeSmall"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:scrollHorizontally="true"
+                                android:ellipsize="marquee"
+                                android:fadingEdge="horizontal"
+                                android:singleLine="true"
+                                />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivAddAddress"
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="@dimen/_8sdp"
+                            android:layout_weight="0"
+                            android:foreground="@drawable/ripple_round"
+                            android:onClick="onClick"
+                            android:tint="@color/color_FF653B"
+                            app:srcCompat="@drawable/ic_add_money" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnCheckout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="@drawable/bg_rounded_orange"
+                        android:elevation="@dimen/_2sdp"
+                        android:foreground="@drawable/ripple_rec"
+                        android:text="Checkout"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/txtSizeLarge" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearEmptyCart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivEmptyCart"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_200sdp"
+                            android:src="@drawable/empty_cart" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ivEmptyCart"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Your cart is empty"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/txtSizeNormal" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

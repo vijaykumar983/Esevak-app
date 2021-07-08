@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/rowDayItem"
+        style="@style/HW_WM"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            style="@style/HW_WM"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:paddingVertical="@dimen/_5sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtDayTime"
+                style="@style/HW_WM"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:text="Monday"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:ellipsize="marquee"
+                android:fadingEdge="horizontal"
+                android:singleLine="true"
+                android:focusable="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txtSizeNormal" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

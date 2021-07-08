@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/rowCategoryItem"
+        android:layout_width="@dimen/_75sdp"
+        android:layout_height="@dimen/_75sdp"
+        android:padding="@dimen/_7sdp"
+        android:gravity="center|center_vertical"
+        android:orientation="vertical"
+        android:clipToPadding="false"
+        >
+
+      <!--  <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >-->
+
+           <!--<androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCategory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/no_image" />-->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            app:cardElevation="@dimen/_2sdp"
+            app:cardCornerRadius="@dimen/_15sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCategory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white"
+                android:scaleType="centerCrop"
+                android:src="@drawable/no_image" />
+        </androidx.cardview.widget.CardView>
+
+           <!-- <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCategoryTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:ellipsize="marquee"
+                android:fadingEdge="horizontal"
+                android:fontFamily="@font/poppins_light"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:paddingHorizontal="@dimen/_2sdp"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="Electrical"
+                android:visibility="gone"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/txtSizeSmall" />
+        </LinearLayout>-->
+    </LinearLayout>
+</layout>

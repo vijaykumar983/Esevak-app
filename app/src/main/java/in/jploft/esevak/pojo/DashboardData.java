@@ -1,0 +1,164 @@
+
+package in.jploft.esevak.pojo;
+
+import com.google.gson.annotations.SerializedName;
+
+import java.util.List;
+
+public class DashboardData {
+
+    @SerializedName("data")
+    private Data mData;
+    @SerializedName("message")
+    private String mMessage;
+    @SerializedName("statusCode")
+    private Long mStatusCode;
+
+    public Data getData() {
+        return mData;
+    }
+
+    public void setData(Data data) {
+        mData = data;
+    }
+
+    public String getMessage() {
+        return mMessage;
+    }
+
+    public void setMessage(String message) {
+        mMessage = message;
+    }
+
+    public Long getStatusCode() {
+        return mStatusCode;
+    }
+
+    public void setStatusCode(Long statusCode) {
+        mStatusCode = statusCode;
+    }
+    
+
+    public static class Data {
+
+        @SerializedName("banners")
+        private List<Banner> mBanners;
+        @SerializedName("category")
+        private List<Category> mCategory;
+        @SerializedName("offers")
+        private List<Offer> mOffers;
+
+        public List<Banner> getBanners() {
+            return mBanners;
+        }
+
+        public void setBanners(List<Banner> banners) {
+            mBanners = banners;
+        }
+
+        public List<Category> getCategory() {
+            return mCategory;
+        }
+
+        public void setCategory(List<Category> category) {
+            mCategory = category;
+        }
+
+        public List<Offer> getOffers() {
+            return mOffers;
+        }
+
+        public void setOffers(List<Offer> offers) {
+            mOffers = offers;
+        }
+
+    }
+
+
+    public static class Banner {
+
+        @SerializedName("id")
+        private String mId;
+        @SerializedName("image")
+        private String mImage;
+
+        public String getId() {
+            return mId;
+        }
+
+        public void setId(String id) {
+            mId = id;
+        }
+
+        public String getImage() {
+            return mImage;
+        }
+
+        public void setImage(String image) {
+            mImage = image;
+        }
+
+    }
+
+    public static class Category {
+
+        @SerializedName("id")
+        private String mId;
+        @SerializedName("image")
+        private String mImage;
+        @SerializedName("name")
+        private String mName;
+
+        public String getId() {
+            return mId;
+        }
+
+        public void setId(String id) {
+            mId = id;
+        }
+
+        public String getImage() {
+            return mImage;
+        }
+
+        public void setImage(String image) {
+            mImage = image;
+        }
+
+        public String getName() {
+            return mName;
+        }
+
+        public void setName(String name) {
+            mName = name;
+        }
+
+    }
+
+    public static class Offer {
+
+        @SerializedName("id")
+        private String mId;
+        @SerializedName("image")
+        private String mImage;
+
+        public String getId() {
+            return mId;
+        }
+
+        public void setId(String id) {
+            mId = id;
+        }
+
+        public String getImage() {
+            return mImage;
+        }
+
+        public void setImage(String image) {
+            mImage = image;
+        }
+
+    }
+
+
+}
